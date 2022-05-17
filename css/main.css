@@ -593,7 +593,6 @@ select {
 	padding: 1.5rem 0;
 	border: 0;
 	outline: none;
-	vertical-align: middle;
 	color: #313131;
 	font-family: "poppins-regular", sans-serif;
 	font-size: 1.5rem;
@@ -1564,8 +1563,7 @@ header .logo a {
 	padding-top: 12rem;
 	padding-bottom: 15rem;
 }
-#about .section-intro {
-}
+
 
 .intro-info {
 	margin-top: 4.2rem;
