@@ -104,7 +104,7 @@ html {
 }
 
 .carousel-container{
-    display: flex;
+    display: inline;
     justify-content: center;
     align-items: center;
     height: 38vh;
@@ -121,7 +121,7 @@ html {
 }
 
 .carousel-images{
-    display: flex;
+    display: inline-flex;
     overflow:hidden; 
     border-radius: 11px;
 }
@@ -177,7 +177,7 @@ html {
 }
 
 .carousel-container2{
-    display: flex;
+    display: inline;
     justify-content: center;
     align-items: center;
     height: 50vh;
