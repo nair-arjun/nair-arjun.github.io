@@ -46,6 +46,28 @@ circuit thing
 body {
 	background-color: #fff;
  }
+ .wave {
+	animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+	animation-duration: 2.5s;        /* Change to speed up or slow down */
+	animation-iteration-count: infinite;  /* Never stop waving :) */
+	transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+	display: inline-block;
+  }
+@keyframes wave-animation {
+	  0% { transform: rotate( 0.0deg) }
+	 10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+	 20% { transform: rotate(-8.0deg) }
+	 30% { transform: rotate(14.0deg) }
+	 40% { transform: rotate(-4.0deg) }
+	 50% { transform: rotate(10.0deg) }
+	 60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+	100% { transform: rotate( 0.0deg) }
+  }
+
+
+
+  
+
  svg {
    position: absolute;
    top: 50%;
@@ -137,7 +159,7 @@ a, a:visited {
 	transition: all 0.3s ease-in-out;
 }
 a:hover, a:focus, a:active {
-	color: #8187da;
+	color: #48c5ff;
 	outline: 0;
 }
 
@@ -348,7 +370,7 @@ ul.disc li::before {
 	width: 8px;
 	height: 8px;
 	border-radius: 50%;
-	background: #8187da;
+	background: #48c5ff;
 	position: absolute;
 	left: -17px;
 	top: 11px;
@@ -356,7 +378,7 @@ ul.disc li::before {
 }
 dt {
 	margin: 0;
-	color: #8187da;
+	color: #48c5ff;
 }
 dd {
 	margin: 0 0 0 2rem;
@@ -476,7 +498,7 @@ img.pull-left {
 	display: none;
 }
 .pace .pace-progress {
-	background: #8187da;
+	background: #48c5ff;
 	position: fixed;
 	z-index: 900;
 	top: 0;
@@ -519,7 +541,7 @@ img.pull-left {
 	border-top: 11px solid rgba(255, 255, 255, 0.1);
 	border-right: 11px solid rgba(255, 255, 255, 0.1);
 	border-bottom: 11px solid rgba(255, 255, 255, 0.1);
-	border-left: 11px solid #8187da;
+	border-left: 11px solid #48c5ff;
 	-webkit-animation: load 1.1s infinite linear;
 	animation: load 1.1s infinite linear;
 	display: block;
@@ -641,8 +663,8 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-	color: #8187da;
-	border-bottom: 1px solid #8187da;
+	color: #48c5ff;
+	border-bottom: 1px solid #48c5ff;
 }
 label, legend {
 	font-family: "poppins-bold", sans-serif;
@@ -783,8 +805,8 @@ button.stroke.large, .button.stroke.large {
 	line-height: 5.4rem !important;
 }
 button.stroke:hover, .button.stroke:hover {
-	border: 3px solid #8187da;
-	color: #8187da;
+	border: 3px solid #48c5ff;
+	color: #48c5ff;
 }
 button::-moz-focus-inner, input::-moz-focus-inner {
 	border: 0;
@@ -972,7 +994,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	color: #252525;
 }
 .stats-tabs li a:hover {
-	color: #8187da;
+	color: #48c5ff;
 }
 .stats-tabs li a em {
 	display: block;
@@ -1088,7 +1110,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	margin-bottom: 1.2rem;
 }
 .section-intro h5 {
-	color: #8187da;
+	color: #48c5ff;
 	font-size: 1.6rem;
 	line-height: 1.875;
 	margin-bottom: 0.3rem;
@@ -1185,7 +1207,7 @@ header .logo a {
 }
 .menu-toggle span {
 	display: block;
-	background-color: #8187da;
+	background-color: #48c5ff;
 	width: 24px;
 	height: 3px;
 	margin-top: -1.5px;
@@ -1243,7 +1265,7 @@ header .logo a {
 	background-color: rgba(255, 0, 119, 0);
 }
 .menu-toggle.is-clicked span::before, .menu-toggle.is-clicked span::after {
-	background-color: #8187da;
+	background-color: #48c5ff;
 	-moz-transition-delay: 0s, 0.2s;
 	-o-transition-delay: 0s, 0.2s;
 	-webkit-transition-delay: 0s, 0.2s;
@@ -1299,12 +1321,12 @@ header .logo a {
 	border: none;
 }
 .main-navigation li a:hover {
-	color: #8187da;
+	color: #48c5ff;
 	padding-left: 1rem;
 }
 .main-navigation li.current > a {
 	background: none;
-	color: #8187da;
+	color: #48c5ff;
 }
 
 /**
@@ -1353,6 +1375,7 @@ header .logo a {
 	position: relative;
 	text-align: center;
 }
+
 .intro-overlay {
 	position: absolute;
 	top: 0;
@@ -1384,9 +1407,9 @@ header .logo a {
 	text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 .intro-content h5 {
-	color: #8187da;
+	color: #48c5ff;
 	font-family: "poppins-bold", sans-serif;
-	font-size: 2.3rem;
+	font-size: 3rem;
 	line-height: 1.565;
 	margin-bottom: 0;
 	text-transform: uppercase;
@@ -1431,7 +1454,7 @@ header .logo a {
 	letter-spacing: .25rem;
 }
 .intro-content .button:hover, .intro-content .button:focus {
-	border-color: #8187da;
+	border-color: #48c5ff;
 }
 .intro-content .button::after {
 	display: inline-block;
@@ -1463,7 +1486,7 @@ header .logo a {
 	color: #FFFFFF;
 }
 .intro-social li a:hover, .intro-social li a:focus {
-	color: #8187da;
+	color: #48c5ff;
 }
 
 /**
@@ -1674,7 +1697,7 @@ header .logo a {
 	text-align: center;
 }
 #resume .resume-header h2 {
-	color: #8187da;
+	color: #48c5ff;
 }
 
 #resume .resume-timeline {
@@ -2001,7 +2024,7 @@ header .logo a {
 	border-right: 1px solid rgba(200, 200, 200, 0.1);
 }
 .popup-modal .link-box a:hover {
-	background: #8187da;
+	background: #48c5ff;
 	border: none;
 }
 @media only screen and (max-width:600px) {
@@ -2167,7 +2190,7 @@ header .logo a {
 	color: white;
 }
 #services .section-intro h5 {
-	color: #8187da;
+	color: #48c5ff;
 }
 #services .section-intro p {
 	color: rgba(255, 255, 255, 0.7);
@@ -2189,7 +2212,7 @@ header .logo a {
 }
 .services-list .icon i {
 	font-size: 5.4rem;
-	color: #8187da;
+	color: #48c5ff;
 }
 .services-list h3 {
 	color: #FFFFFF;
@@ -2217,7 +2240,7 @@ header .logo a {
 	background: #FFFFFF;
 }
 .owl-theme .owl-controls .owl-page.active span {
-	background: #8187da;
+	background: #48c5ff;
 }
 
 
@@ -2228,7 +2251,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #stats {
-	background: #8187da;
+	background: #48c5ff;
 	padding-top: 7.2rem;
 	padding-bottom: 6rem;
 	text-align: center;
@@ -2303,7 +2326,7 @@ header .logo a {
 	color: white;
 }
 #contact .section-intro h5 {
-	color: #8187da;
+	color: #48c5ff;
 }
 #contact .section-intro p {
 	color: rgba(255, 255, 255, 0.7);
@@ -2356,7 +2379,7 @@ header .logo a {
 	padding: 0 2rem;
 	margin: 0;
 	color: #FFFFFF;
-	background: #8187da;
+	background: #48c5ff;
 }
 #contact form .form-field label::after {
 	position: absolute;
@@ -2365,7 +2388,7 @@ header .logo a {
 	margin-top: -6px;
 	border-top: 5px solid transparent;
 	border-bottom: 5px solid transparent;
-	border-right: 5px solid #8187da;
+	border-right: 5px solid #48c5ff;
 	content: "";
 }
 #contact input[type="text"],
@@ -2387,7 +2410,7 @@ header .logo a {
 #contact input[type="text"]:focus,
 #contact input[type="password"]:focus,
 #contact input[type="email"]:focus {
-	border-color: #8187da;
+	border-color: #48c5ff;
 	color: #FFFFFF;
 }
 #contact textarea {
@@ -2395,7 +2418,7 @@ header .logo a {
 	padding: 1.8rem 2rem;
 }
 #contact textarea:focus {
-	border-color: #8187da;
+	border-color: #48c5ff;
 	color: #FFFFFF;
 }
 #contact button.submitform {
@@ -2407,11 +2430,11 @@ header .logo a {
 	padding: 0 3rem;
 	margin-top: 4.8rem;
 	width: 100%;
-	background: #8187da;
+	background: #48c5ff;
 	color: #FFFFFF;
 }
 #contact button.submitform:hover, #contact button.submitform:focus {
-	background: #8187da;
+	background: #48c5ff;
 }
 #message-warning, #message-success {
 	display: none;
@@ -2425,7 +2448,7 @@ header .logo a {
 	color: #fa0003;
 }
 #message-success {
-	color: #8187da;
+	color: #48c5ff;
 }
 #message-warning i, #message-success i {
 	margin-right: 10px;
@@ -2470,7 +2493,7 @@ header .logo a {
 	color: #FFFFFF;
 }
 .contact-info h5 {
-	color: #8187da;
+	color: #48c5ff;
 }
 
 /**
@@ -2544,7 +2567,7 @@ footer a, footer a:visited {
 	color: #FFFFFF;
 }
 footer a:hover, footer a:focus {
-	color: #8187da;
+	color: #48c5ff;
 }
 footer .row {
 	max-width: 900px;
@@ -2623,7 +2646,7 @@ footer .copyright span:last-child::after {
 	width: 6rem;
 	line-height: 6.6rem;
 	text-align: center;
-	background: #8187da;
+	background: #48c5ff;
 	color: #FFFFFF;
 	text-align: center;
 	text-transform: uppercase;
