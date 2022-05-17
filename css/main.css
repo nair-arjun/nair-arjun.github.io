@@ -1328,6 +1328,7 @@ strong {
     outline: 0
 }
 
+
 @media screen and (max-width:1024px) {
     .footer__links a {
         margin: 0 10px
