@@ -104,11 +104,12 @@ html {
 }
 
 .carousel-container{
-    display: inline;
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 38vh;
+    max height: 38vh;
     width:100%;
+    margin: 30px;
 }
 
 .carousel{
@@ -119,6 +120,7 @@ html {
     box-shadow: 10px 10px 35px 0px rgba(0,0,0,0.35);
     position: relative;
 }
+
 
 .carousel-images{
     display: inline-flex;
@@ -177,11 +179,12 @@ html {
 }
 
 .carousel-container2{
-    display: inline;
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    max height: 50vh;
     width:100%;
+    margin: 30px;
 }
 
 .carousel2{
