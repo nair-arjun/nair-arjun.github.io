@@ -44,8 +44,8 @@
         <section class="section background">
             <div class="section__title">Background</div>
             <div class="section__content">
-                <p> I'm currently a Packaging R&D Design Engineer Intern at <a class="underline-link" href="https://intel.com" target="_blank">Intel</a> working on Intel's next-gen IC packaging! I am currently a junior at
-                    <a class="underline-link" href="https://www.ece.ncsu.edu/" target="_blank">North Carolina State University</a> (Class of 2023), after completing various ECE classes and interning at <a class="underline-link" href="https://www.edwardsvacuum.com/" target="_blank">Edwards Vacuum</a> as an electrical engineering intern, I am now more passionate to move forward as an engineer! </p>
+                <p> I'm currently a R&D IC Packaging Engineer Intern at <a class="underline-link" href="https://intel.com" target="_blank">Intel</a> working on Intel's next-gen IC packaging! I am currently a junior at
+                    <a class="underline-link" href="https://www.ece.ncsu.edu/" target="_blank">North Carolina State University</a> (Class of 2024), after completing various ECE classes and interning at <a class="underline-link" href="https://www.edwardsvacuum.com/" target="_blank">Edwards Vacuum</a> as an electrical engineering intern, I am now more passionate to move forward as an engineer! </p>
                 <p> As an engineer, I'm always drawn to various projects and crazy ideas, I'm fascinated by the ability to create and develop entirely new things through PCB Design, 3D printing, Computer Programming or any means necessary. </p>
                 <p> <strong>When I'm not in front of a computer screen</strong>, I'm probably trying to DIY a random project, or rock climbing! </p>
                 <p> <strong>Currently working on:</strong> <br>&#128761 Building an entirely DIY electric skateboard <br>&#128064 Learning how to apply computer vision to my IOT Car <br>&#127929 Working on my lofi hip-hop album <br>&#127909 Watching every bad movie every made (Nicholas Cage is in 30% of them) <br>&#128050 Beating the ender-dragon in Minecraft </p>
@@ -58,22 +58,55 @@
                     <div class="job">
                         <div class="time-place">
                             <div class="job__company"> <a href="https://intel.com/" target="_blank">Intel Corporation</a> </div>
-                            <div class="job__time">May 2022 - present</div>
+                            <div class="job__time">May 2022 - Dec 2022</div>
                         </div>
-                        <div class="job__position">Packaging R&D Design Engineer Intern</div>
+                        <div class="job__position">R&D Packaging Design Engineer Intern</div>
                     </div>
                     <div class="job">
                         <div class="time-place">
                             <div class="job__company"> <a href="https://www.edwardsvacuum.com" target="_blank">Edwards Vacuum</a> </div>
                             <div class="job__time">May 2021 - Aug 2021</div>
                         </div>
-                        <div class="job__position">Electrical Engineering Intern</div>
+                        <div class="job__position">EE-HW Intern</div>
                     </div>
                 </div> <a href="assets/resume.pdf" target="_blank" class="arrow-link">View My Resume</a> </div>
         </section>
         <section class="section projects">
             <div class="section__title">Projects</div>
             <div class="section__content">
+                <div class="project">
+                    <div class="project__name"> <a href="https://github.com/nair-arjun/Multi-Stage-Neural-Network" target="_blank" class="arrow-link">Multi-Stage Neural Network</a> </div>
+                    <section class="carousel-container2">
+                        <div class="carousel2"> 
+                            <div class="carousel-images2">
+                                <img class="carousel-image2 carousel-image-1"src="img/neurnet.png" alt="">
+                                <img class="carousel-image2 carousel-image-1"src="img/neurnet1.png" alt="">
+                                <img class="carousel-image2 carousel-image-1"src="img/neurnet2.png" alt="">
+                                <img class="carousel-image2 carousel-image-1"src="img/neurnet3.png" alt="">
+                            </div>
+                        </div>
+                    </section>
+                    <script src="./app.js"></script>
+                    <p>A hardware-based multi-stage neural network, including a convolutional layer, a fully connected layer and a max pooling layer. <br/>
+                        From a top down perspective the goal of the project is to initially read from a given weights SRAM, store the given weights into registers. Following this you read from the input SRAM to multiply a 3x3 section of the input data with the 3x3 weight matrix and produce an output value. To simplify this process using the given SRAM constraints etc. my approach was to read a 3x4 window from the input SRAM rather than a 3x3 window or the entire SRAM itself. Using a 3x4 window allows the design to compute two matrix calculations since both calculations share values amongst each other. Both these calculations are then stored into their respective accumulators (left and right). Following the calculation the input read address ends at the last address for the second multiplication, the design then moves the address up two rows to the position for the second multiplication and continues until it reaches the last x position of the matrix, at this point the design moves the read address to the first address in the next row to be calculated and continues until the entire output matrix has been completed. When compared to reading the input SRAM with a 3x3 window or copying the input SRAM into registers this implementation is much more efficient with the given SRAM design, as the SRAM can store two output values in one write address and this implementation takes advantage of that.
+ 
+
+                    </p>
+                </div>
+                <div class="project">
+                    <div class="project__name"> <a href="http://www.github.com/nair-arjun/IOT-Car" target="_blank" class="arrow-link">Self Driving IOT Car</a> </div>
+                    <section class="carousel-container2">
+                        <div class="carousel2"> 
+                            <div class="carousel-images2">
+                                <img class="carousel-image2 carousel-image-1"src="img/car1.gif" alt="">
+                                <img class="carousel-image2 carousel-image-2"src="img/car2.png" alt="">
+                                <img class="carousel-image2 carousel-image-3"src="img/car3.png" alt="">
+                            </div>
+                        </div>
+                    </section>
+                    <script src="./app.js"></script>
+                    <p>I soldered and programmed MSP-430 board in C to work in conjunction with 2 DC motors and onboard IR emitter and detector to allow blackline detection. Additionally, I implemented Pulse-Width-Modulation to control wheels using onboard clocks and timers, and used an IOT module to control car navigation via WiFi using a custom interface. Moreover, I created H-Bridge board with pFETs and nFETs to allow forward and reverse control, along with power board consisting of 4 AA battery pack.</p>
+                </div>
                 <div class="project">
                     <div class="project__name"> <a href="assets/frequency_estimator.pdf" target="_blank" class="arrow-link">DSP Frequency Estimator</a> </div>
                     <section class="carousel-container">
@@ -89,20 +122,6 @@
                     </section>
                     <script src="./app.js"></script>
                     <p>The electric network frequency (ENF) in the US has a nominal value of f 0 = 60Hz and its instantaneous value fluctuates round the nominal value as a function of time. The ENF signals can be captured by audio or video recordings made in areas where there is electrical activity. This makes the ENF a good criterion for the forensic analysis of a multimedia recording. Using MATLAB and other resources, we have created a program that can accurately capture and calculate several points of info from an ENF signal.</p>
-                </div>
-                <div class="project">
-                    <div class="project__name"> <a href="http://www.github.com/nair-arjun/IOT-Car" target="_blank" class="arrow-link">Self Driving IOT Car</a> </div>
-                    <section class="carousel-container2">
-                        <div class="carousel2"> 
-                            <div class="carousel-images2">
-                                <img class="carousel-image2 carousel-image-1"src="img/car1.gif" alt="">
-                                <img class="carousel-image2 carousel-image-2"src="img/car2.png" alt="">
-                                <img class="carousel-image2 carousel-image-3"src="img/car3.png" alt="">
-                            </div>
-                        </div>
-                    </section>
-                    <script src="./app.js"></script>
-                    <p>I soldered and programmed MSP-430 board in C to work in conjunction with 2 DC motors and onboard IR emitter and detector to allow blackline detection. Additionally, I implemented Pulse-Width-Modulation to control wheels using onboard clocks and timers, and used an IOT module to control car navigation via WiFi using a custom interface. Moreover, I created H-Bridge board with pFETs and nFETs to allow forward and reverse control, along with power board consisting of 4 AA battery pack.</p>
                 </div>
                 <div class="project">
                     <div class="project__name"> <a href="http://www.github.com/nair-arjun/IOT-Python-Script" target="_blank" class="arrow-link">UDP Python Terminal</a> </div>
@@ -129,7 +148,7 @@
                         </div>
                     </section>
                     <script src="./app.js"></script>
-                    <p>Custom verilog code modelled after the Adler32</p>
+                    <p>Custom verilog code modelled after the Adler32 checksum algorithm.</p>
                 </div>
             </div>
         </section>
